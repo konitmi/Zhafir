@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhafir Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Zhafir Collection</h1>
+        <nav>
+            <button onclick="showMenu('dashboard')">Dashboard</button>
+            <button onclick="showMenu('story')">Lore</button>
+            <button onclick="showMenu('tasks')">Tasks</button>
+            <button onclick="showMenu('share')">Share</button>
+            <button onclick="showMenu('settings')">Settings</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Dashboard -->
+        <section id="dashboard" class="menu active">
+            <h2>Your Zhafir Collection</h2>
+            <div id="zhafir-icons"></div>
+            <p>Collected: <span id="zhafir-count">0</span></p>
+            <p>Remaining: <span id="zhafir-remaining">0</span></p>
+            <p>Null-Zhafir left: <span id="null-remaining">0</span></p>
+        </section>
+
+        <!-- Story/Lore -->
+        <section id="story" class="menu">
+            <h2>Zhafir Lore</h2>
+            <p>Deep, mysterious, and ancient, Zhafir are artifacts beyond time and space...</p>
+        </section>
+
+        <!-- Tasks -->
+        <section id="tasks" class="menu">
+            <h2>Tasks to Claim Zhafir</h2>
+            <ul>
+                <li>Solve puzzle → <a href="#">Submit here</a></li>
+                <li>Follow on YouTube → <a href="#">Link</a></li>
+                <li>Promote Zhafir on Instagram/TikTok → <a href="#">Submit proof</a></li>
+            </ul>
+        </section>
+
+        <!-- Share -->
+        <section id="share" class="menu">
+            <h2>Share & Earn</h2>
+            <p>Invite friends and promote Zhafir to earn rewards.</p>
+            <button onclick="copyLink()">Copy Share Link</button>
+        </section>
+
+        <!-- Settings -->
+        <section id="settings" class="menu">
+            <h2>Settings</h2>
+            <label>Your Alias:</label>
+            <input type="text" id="alias" placeholder="Enter your name">
+            <button onclick="saveAlias()">Save</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Zhafir Universe</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
